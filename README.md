@@ -52,3 +52,6 @@ else
   
 delay(500);
 }
+
+
+![Layout do circuito](https://github.com/MarcelloFMoreira/Projeto-Luminosidade-Sob-Controle---readme/blob/main/Simulador%20de%20circuito%20.png)
