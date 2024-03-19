@@ -1,4 +1,4 @@
-# Projeto-Luminosidade-Sob-Controle---readme
+# Projeto-Luminosidade-Sob-Controle-readme
 
 ##Sobre o projeto
 https://www.tinkercad.com/things/e7X3DGEGJlz-projeto-tomando-um-bom-vinho?sharecode=8zcw5fM7bqEihR8_0OuBUqnGdH8Xyher58addA0ScLg
