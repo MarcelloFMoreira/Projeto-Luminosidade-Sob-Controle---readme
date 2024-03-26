@@ -1,13 +1,13 @@
 # Projeto-Luminosidade-Sob-Controle-readme
 
-##Sobre o projeto
+## Sobre o projeto
 Esse projeto utiliza tecnologia de sensoriamento para medir a luminosidade do ambiente, oferecendo um controle preciso sobre as condições de iluminação ideais para o armazenamento de vinhos. Ao manter as condições ideais de iluminação, nosso projeto ajuda a preservar as propriedades e o sabor dos vinhos, protegendo-os da exposição excessiva à luz que pode deteriorar sua qualidade ao longo do tempo.
 
 
-##Layout do circuito
+## Layout do circuito
 ![Layout do circuito](https://github.com/MarcelloFMoreira/Projeto-Luminosidade-Sob-Controle---readme/blob/main/Simulador%20de%20circuito%20.png)
 
-## equipamentos utilizados
+## Equipamentos utilizados
 -Arduino UNO R3.
 -Placa de ensaio.
 -LDR (Fotorresistor).
@@ -16,7 +16,7 @@ Esse projeto utiliza tecnologia de sensoriamento para medir a luminosidade do am
 -Modulo de som Buzzer.
 -cabos jumpers
 
-##Code
+## Code
 
 int LEDAMARELO = 7;     // DECLARAÇÃO DO LED AMARELO
 int LEDVERMELHO = 8;    // DECLARAÇÃO DO LED VERMELHO
