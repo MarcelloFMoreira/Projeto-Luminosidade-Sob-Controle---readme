@@ -4,7 +4,7 @@
 Esse projeto utiliza tecnologia de sensoriamento para medir a luminosidade do ambiente, oferecendo um controle preciso sobre as condições de iluminação ideais para o armazenamento de vinhos. Ao manter as condições ideais de iluminação, nosso projeto ajuda a preservar as propriedades e o sabor dos vinhos, protegendo-os da exposição excessiva à luz que pode deteriorar sua qualidade ao longo do tempo.
 
 
-## Layout do circuito
+## Layout do circuito no tinkercad
 ![Layout do circuito](https://github.com/MarcelloFMoreira/Projeto-Luminosidade-Sob-Controle---readme/blob/main/Simulador%20de%20circuito%20.png)
 
 ## Equipamentos utilizados
