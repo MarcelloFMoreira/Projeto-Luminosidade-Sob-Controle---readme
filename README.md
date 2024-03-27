@@ -16,6 +16,8 @@ Esse projeto utiliza tecnologia de sensoriamento para medir a luminosidade do am
 -Modulo de som Buzzer.
 -cabos jumpers
 
+![Layout do circuito](https://github.com/MarcelloFMoreira/Projeto-Luminosidade-Sob-Controle---readme/blob/main/Equipamentos%20utilizados.jpeg)
+
 ## Code
 
 int LEDAMARELO = 7;     // DECLARAÇÃO DO LED AMARELO
