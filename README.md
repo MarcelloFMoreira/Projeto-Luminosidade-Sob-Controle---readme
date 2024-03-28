@@ -64,7 +64,6 @@ void loop() {
     digitalWrite(LEDVERMELHO, LOW);  // LED VERMELHO DESLIGAR SE "IF" FOR FALSO
     digitalWrite(BOZINA, LOW);       // BOZINA NÃO REALIZA EFEITO SONORO SE "IF" FOR FALSO
   }
-
   delay(500);
 }
 
