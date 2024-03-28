@@ -67,4 +67,7 @@ void loop() {
   delay(500);
 }
 
+## Funcionalidade do circuito na prática
+
+https://github.com/MarcelloFMoreira/Projeto-Luminosidade-Sob-Controle---readme/assets/161846509/1c62a4c1-777d-4172-b651-c15abb6553da
 
