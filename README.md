@@ -5,7 +5,7 @@ Esse projeto utiliza tecnologia de sensoriamento para medir a luminosidade do am
 
 
 ## Layout do circuito no tinkercad
-Link para visualização direto do software tinkercad: https://www.tinkercad.com/things/e7X3DGEGJlz-projeto-tomando-um-bom-vinho?sharecode=8zcw5fM7bqEihR8_0OuBUqnGdH8Xyher58addA0ScL
+Link para visualização direto do software tinkercad: https://www.tinkercad.com/things/e7X3DGEGJlz-projeto-luminosidade-sob-controle
 ![Layout do circuito](https://github.com/MarcelloFMoreira/Projeto-Luminosidade-Sob-Controle---readme/blob/main/Simulador%20de%20circuito%20.png)
 
 ## Equipamentos utilizados
