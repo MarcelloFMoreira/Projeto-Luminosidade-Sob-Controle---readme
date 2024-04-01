@@ -24,47 +24,42 @@ Link para visualização direto do software tinkercad: https://www.tinkercad.com
 int LEDAMARELO = 7;     // DECLARAÇÃO DO LED AMARELO
 int LEDVERMELHO = 8;    // DECLARAÇÃO DO LED VERMELHO
 int LEDVERDE = 13;      // DECLARAÇÃO DO LED VERDE
-int BOZINA = 4;        // DECLARAÇÃO DO SISTEMA DE BOZINA
+int BUZINA = 4;         // DECLARAÇÃO DO SISTEMA DE BUZINA
 int intencidadeluz;     // DECLARAR VARIAVEL DE INTENSIDADE DA LUZ PARA POSTERIORMENTE CONVERTER DE 0 A 100
 
-void setup () {
+void setup() {
   Serial.begin(9600);                 // INICIANDO COMUNICAÇÃO SERIAL 
   pinMode(LEDAMARELO, OUTPUT);        // DECLARADO LED COMO DISPOSITIVO DE SAÍDA
   pinMode(LEDVERMELHO, OUTPUT);       // DECLARADO LED COMO DISPOSITIVO DE SAÍDA 
   pinMode(LEDVERDE, OUTPUT);          // DECLARADO LED COMO DISPOSITIVO DE SAÍDA 
-  pinMode(BOZINA, OUTPUT);            // DECLARADO BOZINA COMO DISPOSITIVO DE SAÍDA
+  pinMode(BUZINA, OUTPUT);            // DECLARADO BUZINA COMO DISPOSITIVO DE SAÍDA
   pinMode(A0, INPUT);                 // DECLARANDO O LDR COMO DISPOSITIVO DE ENTRADA
 }
 
 void loop() {
-  int LDR = analogRead(A0);                   // LENDO O VALOR DA PORTA ANALÓGICA (A0) DO ARDUINO, PORTA ESSA CONECTADA AO LDR NESSE EXEMPLO
-  intencidadeluz = map(LDR, 0, 1023, 0, 100); // CONVERTER A LEITURA DO LDR DE 0 A 100
-  Serial.println(intencidadeluz);             // APARECER NO MONITOR O VALOR DE 0  A 100
+  int LDR = analogRead(A0);                   
+  intencidadeluz = map(LDR, 0, 1023, 0, 100); 
+  Serial.println(intencidadeluz);             
 
-  if (intencidadeluz < 40) {
-    digitalWrite(LEDVERDE, HIGH);    // LED VERDE ACENDER SE O VALOR DA LDR FOR MENOR QUE 40
+  digitalWrite(LEDVERDE, intencidadeluz < 40); // Ligar LED verde se a intensidade da luz for menor que 40
+
+  if (intencidadeluz >= 40 && intencidadeluz < 50) {
+    digitalWrite(LEDAMARELO, HIGH);  
+    tone(BUZINA, 500); // Produzir som com frequência de 500 Hz
+    delay(1000); // Aguardar 1 segundo
+    noTone(BUZINA); // Desligar som
   } else {
-    digitalWrite(LEDVERDE, LOW);     // LED VERDE DESLIGAR SE "IF" FOR FALSO
+    digitalWrite(LEDAMARELO, LOW);   
   }
 
-  if (intencidadeluz > 39 && intencidadeluz < 50) {
-    digitalWrite(LEDAMARELO, HIGH);  // LED AMARELO ACENDER SE O VALOR DA LDR FOR MAIOR QUE 39 E MENOR QUE 50
-    tone(BOZINA, 500, 1000);         // BOZINA REALIZAR EFEITO SONORO
-    delay(3000);                     // TEMPO DE PAUSA DO EFEITO SONORO
+  if (intencidadeluz >= 50) {
+    digitalWrite(LEDVERMELHO, HIGH); 
+    tone(BUZINA, 1000); // Produzir som com frequência de 1000 Hz
   } else {
-    digitalWrite(LEDAMARELO, LOW);   // LED AMARELO DESLIGAR SE "IF" FOR FALSO
-    digitalWrite(BOZINA, LOW);       // BOZINA NÃO REALIZA EFEITO SONORO SE "IF" FOR FALSO
+    digitalWrite(LEDVERMELHO, LOW);  
+    noTone(BUZINA); // Desligar som
   }
 
-  if (intencidadeluz > 49) {
-    digitalWrite(LEDVERMELHO, HIGH); // LED VERMELHO ACENDER SE O VALOR DA LDR FOR MAIOR QUE 49
-    tone(BOZINA, 1000);              // BOZINA REALIZAR EFEITO SONORO
-    
-   
-  } else {
-    digitalWrite(LEDVERMELHO, LOW);  // LED VERMELHO DESLIGAR SE "IF" FOR FALSO
-    digitalWrite(BOZINA, LOW);       // BOZINA NÃO REALIZA EFEITO SONORO SE "IF" FOR FALSO
-  }
   delay(500);
 }
 
