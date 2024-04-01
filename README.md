@@ -38,7 +38,7 @@ void setup() {
 
 void loop() {
   int LDR = analogRead(A0);                   
-  intencidadeluz = map(LDR, 0, 1023, 0, 100); 
+  intencidadeluz = map(LDR, 49, 969, 0, 100); 
   Serial.println(intencidadeluz);             
 
   digitalWrite(LEDVERDE, intencidadeluz < 40); // Ligar LED verde se a intensidade da luz for menor que 40
